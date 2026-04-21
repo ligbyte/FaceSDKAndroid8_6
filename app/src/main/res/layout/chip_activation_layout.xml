@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--
+       芯片激活
+       -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/chip_useRl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_marginRight="49.3dp"
+                android:layout_marginLeft="49.3dp"
+                android:id="@+id/chip_useLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_round_import"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textSize="@dimen/activition_14_sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/use_chip"
+                    android:textColor="@color/activition_on" />
+
+                <RelativeLayout
+                    android:layout_marginTop="@dimen/start_15"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/chip_hintUseOne"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="一"
+                        android:textColor="#ffffff"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/chip_hintUseOne"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/use_chip_one"
+                        android:textColor="#ffffff"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginBottom="@dimen/start_15"
+                    android:layout_marginTop="@dimen/start_10"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/chip_hintUseTwo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="二"
+                        android:textColor="#ffffff"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/chip_hintUseTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/use_chip_two"
+                        android:textColor="#ffffff"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginLeft="49.3dp"
+                android:layout_marginRight="49.3dp"
+                android:textSize="@dimen/bottom_font"
+                android:layout_marginTop="@dimen/activition_14"
+                android:id="@+id/chip_useErrorTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/chip_useLl"
+                android:gravity="center"
+                android:textColor="@color/activition_red"/>
+
+            <Button
+                android:id="@+id/chip_useBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/chip_useErrorTv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="@dimen/activition_14"
+                android:layout_marginRight="50dp"
+                android:background="@mipmap/btn_main_normal"
+                android:padding="13dp"
+                android:text="@string/accredit_on"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:textSize="@dimen/activition_14_sp"
+                android:id="@+id/chip_usehiteTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/chip_useBtn"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="@string/off_problem"
+                android:textColor="#999999"/>
+
+            <LinearLayout
+                android:id="@+id/load_view"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/shape_dialog_bg"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+                    <ProgressBar
+                        android:id="@+id/pb_load"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:indeterminateDrawable="@drawable/progressbar"
+                        android:layout_centerInParent="true"/>
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/tv_load_dialog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="加载中..."
+                    android:textColor="#9a9b98"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

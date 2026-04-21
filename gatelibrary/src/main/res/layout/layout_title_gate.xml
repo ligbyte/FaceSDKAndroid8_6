@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:alpha="0.9"
+    android:background="#121212">
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_centerVertical="true"
+        android:padding="5dp"
+        android:src="@mipmap/ic_return"
+        android:text="@string/button_back"
+        android:textColor="#ffffff" />
+
+
+    <ImageView
+        android:id="@+id/preview_view"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:layout_below="@+id/preview_text"
+        android:layout_alignLeft="@id/preview_text"
+        android:layout_alignRight="@id/preview_text"
+        android:layout_marginTop="-12dp"
+        android:src="@mipmap/ic_highlight" />
+    <TextView
+        android:id="@+id/preview_text"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="50dp"
+        android:layout_toEndOf="@+id/btn_back"
+        android:layout_centerVertical="true"
+        android:text="@string/navigation_title_mode_preview"
+        android:textColor="#d3d3d3"
+        android:textSize="25sp" />
+
+
+
+    <ImageView
+        android:id="@+id/develop_view"
+        android:layout_width="102dp"
+        android:layout_height="12dp"
+        android:layout_below="@+id/develop_text"
+        android:layout_alignLeft="@id/develop_text"
+        android:layout_alignRight="@id/develop_text"
+        android:layout_marginTop="-12dp"
+        android:src="@mipmap/ic_highlight"
+        android:visibility="gone" />
+    <TextView
+        android:id="@+id/develop_text"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="60dp"
+        android:layout_toEndOf="@+id/preview_text"
+        android:text="@string/navigation_title_mode_developer"
+        android:layout_centerVertical="true"
+        android:textColor="#999999"
+        android:textSize="25sp" />
+
+</RelativeLayout>

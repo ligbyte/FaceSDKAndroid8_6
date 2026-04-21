@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="bottom"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/layout_compare_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:layout_marginBottom="30dp"
+        android:layout_gravity="center"
+        android:background="@drawable/gate_radius_compare">
+
+        <TextView
+            android:id="@+id/text_compare_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:singleLine = "true"
+            android:ellipsize = "end"
+            android:textColor="#FF00BAF2"
+            android:textSize="20sp" />
+    </RelativeLayout>
+    <!--送检图片-->
+    <RelativeLayout
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="130dp">
+
+        <include layout="@layout/item_save_camera"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"/>
+        <ImageView
+            android:id="@+id/face_detect_image_view"
+            android:layout_width="110dp"
+            android:layout_height="83dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/gate_imageview_radius"
+            android:importantForAccessibility="no"
+            android:src="@mipmap/ic_image_video"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/detect_surface_text"
+            android:layout_width="110dp"
+            android:layout_height="23dp"
+            android:alpha="0.8"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/relativelayout_radius"
+            android:gravity="center_vertical"
+            android:text="@string/label_detect_frame_rgb"
+            android:textColor="#FFFFFFFF"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+
+        <ImageView
+            android:id="@+id/is_check_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/detect_surface_text"
+            android:layout_alignEnd="@+id/face_detect_image_view"
+            android:layout_marginEnd="2dp"
+            android:visibility="visible" />
+
+
+        <!--nir视频帧-->
+        <RelativeLayout
+            android:id="@+id/nir_group"
+            android:layout_width="110dp"
+            android:layout_height="83dp"
+            android:layout_marginEnd="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            >
+
+            <TextureView
+                android:id="@+id/ir_camera_preview_view"
+                android:layout_width="110dp"
+                android:layout_height="83dp"
+                android:layout_alignParentEnd="true"
+                tools:ignore="RtlCompat" />
+            <TextView
+                android:id="@+id/nir_surface_text"
+                android:layout_width="110dp"
+                android:layout_height="23dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignStart="@+id/ir_camera_preview_view"
+                android:background="@drawable/relativelayout_radius"
+                android:text="@string/label_detect_frame_nir"
+                android:textColor="#FFFFFFFF"
+                android:layout_alignParentBottom="true"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText,RtlCompat" />
+            <ImageView
+                android:id="@+id/is_nir_check_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="2dp"
+                android:visibility="visible"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                tools:ignore="RtlCompat" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!--开发模式-->
+    <RelativeLayout
+        android:id="@+id/kaifa_relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="127dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/gate_radius"
+        android:orientation="horizontal"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_stat_database"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tv_detect_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rgb_live_procedure_time"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tv_rgb_live_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"                    android:text="@string/tv_dt_detect_procedure_time"
+
+                    android:textColor="#ffffff"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText"/>
+
+                <TextView
+                    android:id="@+id/tv_rgb_live_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rgb_live_procedure_score"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tv_nir_live_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nir_live_procedure_time"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tv_nir_live_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nir_live_procedure_score"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+            <View
+                android:id="@+id/id_view"
+                android:layout_width="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="match_parent"/>
+
+            <LinearLayout
+                android:layout_alignLeft="@id/id_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical"
+                tools:ignore="RtlHardcoded">
+
+                <TextView
+                    android:id="@+id/tv_depth_live_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/depth_live_procedure_time"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText"/>
+
+                <TextView
+                    android:id="@+id/tv_depth_live_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/depth_live_procedure_score"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText"/>
+
+                <TextView
+                    android:id="@+id/tv_feature_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/feature_extract_time"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText"/>
+
+                <TextView
+                    android:id="@+id/tv_feature_search_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/feature_compare_time"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText"/>
+
+                <TextView
+                    android:id="@+id/tv_all_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_dt_total_time"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,11 @@
+include ':face-sdk-library'
+include ':app',
+        ':facelibrary'
+include ':gatelibrary'
+include ':registerlibrary'
+include ':identifylibrary'
+include ':datalibrary'
+include ':settinglibrary'
+include ':AuthLibrary'
+include ':faceaar'
+include ':attrbutelibrary'

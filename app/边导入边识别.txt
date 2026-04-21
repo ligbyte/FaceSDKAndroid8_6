@@ -1,0 +1,53 @@
+# 边导入边识别
+如在视频流1：N识别下，要同时加入人脸导入功能请参考以下：
+1.初始化FaceModel下(认证核验模型配置)
+2.额外添加线程执行人脸检测+人脸特征提取
+
+
+private Future mFuture;
+
+// 1、获取导入目录 /sdcard/Face-Import
+File batchImportDir = FileUtils.getBatchImportDirectory();
+// 2、遍历该目录下的所有人脸图
+File[] picFiles = batchImportDir.listFiles();
+
+private void asyncImport(final File[] picFiles) {
+    if (mFuture != null && !mFuture.isDone()) {
+         return;
+     }
+
+    if (mExecutorService == null) {
+        mExecutorService = Executors.newSingleThreadExecutor();
+    }
+
+    mFuture = mExecutorService.submit(new Runnable() {
+           @Override
+           public void run() {
+                // 循环获取人脸图--检测和识别详细请参考认证核验模块
+                for (int i = 0; i < picFiles.length; i++) {
+                    ............
+
+                    Bitmap bitmap = BitmapFactory.decodeFile(picFiles[i].getAbsolutePath());
+                    BDFaceImageInstance imageInstance = new BDFaceImageInstance(bitmap);
+
+                    // 人脸检测
+                    faceInfos = FaceSDKManager.getInstance().getFaceDetectPerson()
+                                                  .detect(BDFaceSDKCommon.DetectType.DETECT_VIS, imageInstance)
+
+
+                    // 人脸特征提取
+                    float ret = FaceSDKManager.getInstance().getFacePersonFeature().feature(
+                                    featureType, imageInstance,
+                                    faceInfo.landmarks, feature)
+
+                    imageInstance.destory();
+
+                    .............
+                }
+           }
+    });
+
+}
+
+
+

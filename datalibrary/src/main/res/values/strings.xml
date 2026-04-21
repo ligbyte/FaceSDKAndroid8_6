@@ -1,0 +1,21 @@
+<resources>
+    <string name="error_cannot_detect_face">未检测到人脸</string>
+    <string name="error_request_failed">请求失败 , code = </string>
+    <string name="error_parse_failed">解析失败</string>
+    <string name="error_network_request_failed">网络请求失败</string>
+    <string name="error_get_token_failed">获取token失败！</string>
+
+    <string name="toast_loading_face_database">人脸库加载中</string>
+    <string name="toast_face_database_loaded_success">人脸库加载成功</string>
+
+    <string name="toast_select_camera">请选择镜头型号在进行返回操作</string>
+
+
+    <string name="field_folder">配置文件路径</string>
+
+    <string name="log_file_not_exist">文件不存在</string>
+    <string name="log_file_content_abnormal">文件内容异常,请检测是否规范</string>
+    <string name="log_format_exception">文件内容格式异常,请检测是否规范</string>
+
+    <string name="reflection_no_property">没有该属性: </string>
+</resources>

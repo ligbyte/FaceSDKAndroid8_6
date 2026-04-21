@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true"
+    android:layout_marginStart="50.3dp"
+    android:layout_marginTop="@dimen/start_15"
+    android:layout_marginBottom="@dimen/start_15"
+    android:layout_marginEnd="@dimen/activition_20"
+    android:layout_toRightOf="@+id/kaifa_leftRl"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_user_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_detect"
+        android:text="相似度分数：0.0"
+        android:textColor="#ffffff"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_rgb_live_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/rgb_live_procedure_time"
+        android:textColor="#ffffff"
+        android:textSize="12sp" />
+    <TextView
+        android:id="@+id/tv_rgb_live_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/rgb_live_procedure_score"
+        android:textColor="#ffffff"
+        android:textSize="12sp" />
+    <TextView
+        android:id="@+id/nir_live_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/nir_live_procedure_time"
+        android:textColor="#ffffff"
+        android:textSize="12sp" />
+    <TextView
+        android:id="@+id/nir_live_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/nir_live_procedure_score"
+        android:textColor="#ffffff"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_feature_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/feature_extract_time"
+        android:textColor="#ffffff"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_feature_search_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/feature_compare_time"
+        android:textColor="#ffffff"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_all_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/tv_dt_total_time"
+        android:textColor="#ffffff"
+        android:textSize="12sp" />
+</LinearLayout>

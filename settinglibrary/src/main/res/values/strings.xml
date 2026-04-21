@@ -1,0 +1,159 @@
+<resources>
+    <string name="app_name" translatable="false">settinglibrary</string>
+
+    <string name="cw_livedetecttype" translatable="false">活体检测主要用于判断用户是否为真人，但如使用场景下，常有固定人员看守，则可无需活体，直接采集人脸。因为活体检测虽然保障了安全性，但却会影响一定的通过率。</string>
+
+    <string name="cw_rgblive" translatable="false">RGB:仅使用 RGB 活体（单目活体），可有效防止照片翻拍、屏幕等攻击，前端采集可为 USB 单目镜头即可。</string>
+
+    <string name="cw_rgbandnir" translatable="false">RGB+NIR:RGB 单目活体+NIR 近红外活体，基于近红外图像的成像特点，如屏幕无法成像，不同材质反射率不同等，可对屏幕、高清照片等攻击，更加有效的防作弊。</string>
+
+    <string name="cw_rgbanddepth" translatable="false">RGB+Depth:RGB 单目活体+Depth 深度活体，在 RGB 活体的安全级别基础上，对屏幕、高清彩打照片、视频、模具等防御力更强。硬件需要搭配 3D 结构光、TOF 类型的镜头。</string>
+
+    <string name="cw_livethrehold" translatable="false">活体检测阈值：活体阈值用于判断是否活体通过，每种活体模型的阈值单独设定，可以根据此阈值来判断活体通过率和拒绝率。通常情况下，真人的活体得分极大接近于 1，非活体极大接近于 0.0，阈值设定视安全性而定。阈值越高，通过率越低、拒绝率越高</string>
+
+    <string name="cw_gesture" translatable="false">人脸在空间角度的水平旋转、平面旋转、上下俯仰三个方向的角度。角度越小，采集的人脸越正面朝前。</string>
+
+    <string name="cw_illuminiation" translatable="false">人脸面部的光线要求，取值范围[0~1]，脸部光照的灰度值，0 表示光照不好。对应 SDK 中，YUV 的 Y 分量】</string>
+
+    <string name="cw_blur" translatable="false">人脸图片的模糊度范围，取值范围[0~1]，0 是最清晰，1 是最模糊。可根据场景要求适当减小数值，减少模糊图片的采集情况】</string>
+
+    <string name="cw_occulusion" translatable="false">左右眼睛、左右脸颊、鼻子、嘴巴、下巴的遮挡情况，取值范围 [0~1]，0 为无遮挡，1 是完全遮挡。反映采集的人脸图片可接受的各部位的遮挡情况。</string>
+
+    <string name="cw_recognizethrehold" translatable="false">识别阈值：生活照和证件照模型阈值已经都做过分值映射，官方推荐判断为同一人的阈值为 80 分，详细的 FAR 和 FRR 映射关系请在 SDK 文档中查看。阈值越高识别率越高、误识率越低、通过率越低。</string>
+
+    <string name="cw_detectframe" translatable="false">根据镜头或者使用设备差异，可能存在检测框与实际人脸方向镜像的问题，可通过以下设置进行调节。常见于镜头前置后置切换。</string>
+
+    <string name="cw_cameradisplay" translatable="false">该功能用于对暗光条件下取得的图像进行恢复，进而使得图像接近正常光线条件下取得的图像。长期在光线较暗的环境下使用SDK，建议开启该功能，但该功能会明显增加全流程耗时，请根据实际需求选择是否开启该功能</string>
+
+    <string name="cw_minface" translatable="false">最小检测人脸：视频流中可以检测到的人脸的最小面积，相同镜头焦距情况下，此数值设置的越小，人脸越容易被检索到，对应的可识别距离也就越大。此数值通常和分辨率一同配合使用。数值可调整范围为 30px 至 200px 之间，需要同时考虑分辨率大小因素影响。每次调节上下改变幅度为 10px。</string>
+
+    <string name="cw_face_threshold" translatable="false">人脸置信度用于表征被检测到的物体是人脸的概率，该阈值设置越高检测越严格，建议在0.3-0.8区间内调整阈值</string>
+
+    <string name="cw_multi_identify" translatable="false">开启后可同时识别多人，目前demo展示为最多识别2人</string>
+
+    <string name="cw_mask_identify" translatable="false">开启后支持识别戴口罩戴人脸</string>
+
+    <string name="cw_log" translatable="false">该功能用于开启或关闭SDK及示例工程打印的全部日志，是否开启该设置项不影响用户自己添加的日志的打印</string>
+
+    <string name="cw_darkEnhance" translatable="false">该功能用于对暗光条件下取得的图像进行恢复，进而使得图像接近正常光线条件下取得的图像。长期在光线较暗的环境下使用SDK，建议开启该功能，但该功能会明显增加全流程耗时，请根据实际需求选择是否开启该功能</string>
+
+    <string name="cw_bestimage" translatable="false">该功能用于对图像质量进行筛选，开启该功能后只有满足筛选条件的图像才会进入到后续流程。为提高识别准确率，建议开启该功能，该功能不会显著增加全流程耗时</string>
+
+    <string name="wear_a_mask" translatable="false">戴口罩</string>
+    <string name="auth_for_ever" translatable="false">永久</string>
+    <string name="gate_setting" translatable="false">设置</string>
+    <string name="gate_face_detection" translatable="false">人脸检测</string>
+    <string name="gate_quality_inspection" translatable="false">质量检测</string>
+    <string name="gate_huoti_detection" translatable="false">活体检测</string>
+    <string name="gate_face_recognition" translatable="false">人脸识别</string>
+    <string name="gate_lens_settings" translatable="false">镜头设置</string>
+    <string name="gate_picture_optimization" translatable="false">图像优化</string>
+    <string name="gate_log_settings" translatable="false">日志设置</string>
+
+
+    <string name="title_video_stream_echo_angle" translatable="false">视频流回显角度</string>
+
+    <string name="label_recognition_mode" translatable="false">识别模态</string>
+    <string name="label_nir_lens" translatable="false">NIR镜头</string>
+
+    <string name="button_rotate" translatable="false">旋转</string>
+    <string name="button_mirror" translatable="false">镜像</string>
+
+    <string name="footer_baidu_brain_support" translatable="false">— 百度大脑技术支持 —</string>
+
+    <string name="title_quality_detection_settings" translatable="false">质量检测设置</string>
+
+    <string name="label_quality_detection" translatable="false">质量检测</string>
+
+    <string name="label_pose" translatable="false">姿态</string>
+    <string name="label_illumination" translatable="false">光照</string>
+    <string name="label_blur" translatable="false">模糊度</string>
+    <string name="label_occlusion" translatable="false">遮挡（0是无遮挡，1是完全遮挡）</string>
+    <string name="label_eye" translatable="false">左右眼</string>
+    <string name="label_cheek" translatable="false">左右脸颊</string>
+    <string name="label_nose" translatable="false">鼻子</string>
+    <string name="label_mouth" translatable="false">嘴巴</string>
+    <string name="label_chin" translatable="false">下巴</string>
+
+    <string name="unit_degrees" translatable="false">(单位:度)</string>
+
+    <string name="title_face_recognition" translatable="false">人脸识别</string>
+
+    <string name="option_rgb_recognition" translatable="false">RGB识别</string>
+    <string name="option_rgb_id_photo_model" translatable="false">RGB模态证件照模型</string>
+    <string name="option_rgb_nir_multi_modal" translatable="false">RGB+NIR混合模态识别</string>
+
+    <string name="label_rgb_nir_switch_condition" translatable="false">RGB/NIR模态切换条件</string>
+    <string name="label_mode_switch_light_threshold" translatable="false">模态切换光线阈值</string>
+
+
+    <string name="label_recognition_threshold" translatable="false">识别阈值</string>
+    <string name="label_rgb_threshold" translatable="false">RGB阈值</string>
+    <string name="label_rgb_nir_multi_modal_threshold" translatable="false">RGB+NIR混合模态阈值</string>
+
+    <string name="title_face_detection_angle" translatable="false">人脸检测角度</string>
+
+    <string name="title_liveness_detection" translatable="false">活体检测</string>
+
+    <string name="label_switch_liveness_detection" translatable="false">活体检测</string>
+
+    <string name="label_detection_frames" translatable="false">检测帧数</string>
+    <string name="label_liveness_mode" translatable="false">活体检测模态</string>
+    <string name="option_rgb_liveness_detection" translatable="false">RGB单目活体检测</string>
+    <string name="option_rgb_nir_liveness" translatable="false">RGB+NIR活体</string>
+    <string name="label_liveness_threshold" translatable="false">活体检测阈值</string>
+    <string name="label_rgb_liveness_threshold" translatable="false">RGB活体阈值</string>
+    <string name="label_nir_liveness_threshold" translatable="false">NIR活体阈值</string>
+
+    <string name="title_lens_settings" translatable="false">镜头相关设置</string>
+
+    <string name="config_face_detection_image" translatable="false">人脸检测图像设置</string>
+    <string name="config_display_angle" translatable="false">视频流回显图像设置</string>
+    <string name="config_face_detection_box_mirror" translatable="false">人脸检测框镜像</string>
+
+    <string name="status_open" translatable="false">开启</string>
+
+    <string name="title_mirror_settings" translatable="false">镜像设置</string>
+
+    <string name="label_face_detection_mirror" translatable="false">人脸检测镜像</string>
+    <string name="label_video_stream_mirror" translatable="false">视频流回显/图像帧镜像</string>
+
+    <string name="option_detection_box_mirror" translatable="false">检测框镜像</string>
+    <string name="option_rgb_stream_mirror" translatable="false">RGB视频流/图像帧镜像</string>
+    <string name="option_nir_stream_mirror" translatable="false">NIR视频流/图像帧镜像</string>
+
+    <string name="title_face_detection_settings" translatable="false">人脸检测设置</string>
+
+    <string name="hint_threshold_restart" translatable="false">调节好阈值后重启生效</string>
+
+    <string name="label_min_face_detection" translatable="false">最小检测人脸</string>
+    <string name="hint_min_face_unit" translatable="false">(单位:px)</string>
+    <string name="label_face_confidence" translatable="false">人脸置信度</string>
+    <string name="label_multi_face_recognition" translatable="false">多人脸识别</string>
+    <string name="label_mask_recognition" translatable="false">戴口罩识别</string>
+
+    <string name="title_settings" translatable="false">设置</string>
+
+    <string name="config_version_info" translatable="false">版本信息</string>
+
+
+    <string name="config_log_printing" translatable="false">应用日志打印</string>
+
+    <string name="group_dark_enhance" translatable="false">暗光恢复</string>
+    <string name="function_dark_enhance" translatable="false">暗光恢复功能</string>
+
+    <string name="group_best_image" translatable="false">Best Image</string>
+    <string name="function_best_image" translatable="false">Best Image功能</string>
+
+    <string name="btn_close" translatable="false">关闭</string>
+
+    <string name="label_sdk_version" translatable="false">SDK版本</string>
+    <string name="label_system_version" translatable="false">系统版本</string>
+    <string name="label_activation_status" translatable="false">激活状态</string>
+    <string name="label_authorization_validity" translatable="false">授权有效期</string>
+    <string name="label_validity_until" translatable="false">有效期至</string>
+
+    <string name="status_not_activated" translatable="false">未激活</string>
+    <string name="status_activated" translatable="false">已激活</string>
+
+</resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/user_name_layout"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@drawable/gate_radius_compare">
+
+    <com.example.datalibrary.view.CircleImageView
+        android:id="@+id/detect_reg_image_item"
+        android:layout_width="61dp"
+        android:layout_height="61dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginBottom="19dp" />
+
+    <TextView
+        android:id="@+id/name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="19dp"
+        android:layout_toEndOf="@+id/detect_reg_image_item"
+
+        android:textColor="#00BAF2"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/attendance_time_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name_text"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/detect_reg_image_item"
+
+        android:textColor="#fff"
+        android:textSize="18sp" />
+</RelativeLayout>

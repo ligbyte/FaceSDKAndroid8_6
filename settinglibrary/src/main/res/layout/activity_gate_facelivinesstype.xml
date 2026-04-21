@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/logo_view"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linerbarlivedetectmodel"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fls_save"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="30dp"
+                        android:scaleType="centerInside"
+                        android:src="@mipmap/ic_return" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/title_liveness_detection"
+                    android:textColor="@color/white"
+                    android:textSize="25sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="#333333"></View>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp">
+
+                    <RelativeLayout
+                        android:id="@+id/qc_LinerFirst"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="@drawable/sr_liner_rectangle"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp"
+                            android:text="@string/title_liveness_detection"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+
+                        <Switch
+                            android:id="@+id/qc_Living"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20dp"
+                            android:thumb="@drawable/setting_switch_thumb"
+                            android:track="@drawable/setting_switch_track_selector" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/qc_LinerLiving"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/sr_liner_rectangle"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:id="@+id/linergesture"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tvgesture"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/activition_20"
+                                    android:text="检测帧数"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp"></TextView>
+
+                                <ImageView
+                                    android:id="@+id/qc_GestureDecrease"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="200dp"
+                                    android:scaleType="centerInside"
+                                    android:src="@mipmap/icon_setting_minus" />
+
+                                <EditText
+                                    android:id="@+id/qc_GestureEtThreshold"
+                                    android:layout_width="50dp"
+                                    android:layout_height="30dp"
+                                    android:background="@drawable/sr_liner_rectangle_black"
+                                    android:focusable="false"
+                                    android:gravity="center"
+                                    android:inputType="number"
+                                    android:minWidth="60dp"
+                                    android:text="3"
+                                    android:textColor="#cccccc"
+                                    android:textSize="20sp" />
+
+                                <ImageView
+                                    android:id="@+id/qc_GestureIncrease"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:scaleType="centerInside"
+                                    android:src="@mipmap/icon_setting_add" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linerlivetpye"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvlivetype"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="30dp"
+                            android:text="@string/label_liveness_mode"
+                            android:textColor="#999999"
+                            android:textSize="15sp" />
+
+                        <Button
+                            android:id="@+id/cw_livetype"
+                            android:layout_width="23dp"
+                            android:layout_height="23dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@mipmap/icon_setting_question"></Button>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp">
+
+                        <LinearLayout
+                            android:id="@+id/flRepresent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/sr_liner_rectangle"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="75dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <CheckBox
+                                    android:id="@+id/fls_rgb_live"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="15dp"
+                                    android:button="@drawable/sr_radio_button__selector" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/start_15"
+                                    android:text="@string/option_rgb_liveness_detection"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp" />
+
+                                <Button
+                                    android:id="@+id/cw_rgb"
+                                    android:layout_width="23dp"
+                                    android:layout_height="23dp"
+                                    android:layout_marginLeft="12dp"
+                                    android:background="@mipmap/icon_setting_question" />
+                            </LinearLayout>
+
+                            <View
+                                android:id="@+id/rgbView"
+                                android:layout_width="match_parent"
+                                android:layout_height="0.3dp"
+                                android:background="#333333" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="75dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <CheckBox
+                                    android:id="@+id/fls_rgbandnir_live"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="15dp"
+                                    android:button="@drawable/sr_radio_button__selector" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/start_15"
+                                    android:text="@string/option_rgb_nir_liveness"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp" />
+
+                                <Button
+                                    android:id="@+id/cw_rgbandnir"
+                                    android:layout_width="23dp"
+                                    android:layout_height="23dp"
+                                    android:layout_marginLeft="12dp"
+                                    android:background="@mipmap/icon_setting_question" />
+                            </LinearLayout>
+
+                            <View
+                                android:id="@+id/rgbAndNirView"
+                                android:layout_width="match_parent"
+                                android:layout_height="0.3dp"
+                                android:background="#333333" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linerlivethreshold"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvlive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:text="@string/label_liveness_threshold"
+                            android:textColor="#999999"
+                            android:textSize="15sp"></TextView>
+
+                        <Button
+                            android:id="@+id/cw_livethrehold"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@mipmap/icon_setting_question"></Button>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/sr_liner_rectangle"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/rgb_thresholdTv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:text="@string/label_rgb_liveness_threshold"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp"></TextView>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true">
+
+                                    <ImageView
+                                        android:id="@+id/th_RgbLiveDecrease"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:layout_marginLeft="165dp"
+                                        android:scaleType="centerInside"
+                                        android:src="@mipmap/icon_setting_minus" />
+
+
+                                    <EditText
+                                        android:id="@+id/th_RgbLiveEtThreshold"
+                                        android:layout_width="50dp"
+                                        android:layout_height="30dp"
+                                        android:alpha="0.6"
+                                        android:background="@drawable/sr_liner_rectangle_black"
+                                        android:focusable="false"
+                                        android:gravity="center"
+                                        android:inputType="number"
+                                        android:minWidth="60dp"
+                                        android:text="0.8"
+                                        android:textColor="@color/white"
+                                        android:textSize="20sp" />
+
+                                    <ImageView
+                                        android:id="@+id/th_RgbLiveIncrease"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:scaleType="centerInside"
+                                        android:src="@mipmap/icon_setting_add" />
+
+
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.3dp"
+                                android:background="#333333"></View>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/nir_thresholdTv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:text="@string/label_nir_liveness_threshold"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp"></TextView>
+
+                                <LinearLayout
+                                    android:layout_alignParentRight="true"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <ImageView
+                                        android:id="@+id/th_NirLiveDecrease"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:layout_marginLeft="172dp"
+                                        android:scaleType="centerInside"
+                                        android:src="@mipmap/icon_setting_minus" />
+
+                                    <ImageView
+                                        android:id="@+id/th_NirLiveDecrease_Ash_disposal"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:layout_marginLeft="172dp"
+                                        android:scaleType="centerInside"
+                                        android:src="@mipmap/icon_setting_minus"
+                                        android:visibility="gone" />
+
+                                    <EditText
+                                        android:id="@+id/th_NirLiveEtThreshold"
+                                        android:layout_width="50dp"
+                                        android:layout_height="30dp"
+                                        android:alpha="0.6"
+                                        android:background="@drawable/sr_liner_rectangle_black"
+                                        android:focusable="false"
+                                        android:gravity="center"
+                                        android:inputType="number"
+                                        android:minWidth="60dp"
+                                        android:text="0.8"
+                                        android:textColor="@color/white"
+                                        android:textSize="20sp" />
+
+                                    <ImageView
+                                        android:id="@+id/th_NirLiveIncrease"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:scaleType="centerInside"
+                                        android:src="@mipmap/icon_setting_add" />
+
+                                    <ImageView
+                                        android:id="@+id/th_NirLiveIncrease_Ash_disposal"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:scaleType="centerInside"
+                                        android:src="@mipmap/adding_sign_to_gray"
+                                        android:visibility="gone" />
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.3dp"
+                                android:background="#333333"></View>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/logo_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activition_20"
+        android:layout_above="@+id/logo_text" />
+
+    <TextView
+        android:id="@+id/logo_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="23dp"
+        android:alpha="0.4"
+        android:gravity="center_horizontal"
+        android:text="@string/footer_baidu_brain_support"
+        android:textColor="#666666"
+        android:textSize="@dimen/bottom_font" />
+
+    <View
+        android:id="@+id/popShowRely"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

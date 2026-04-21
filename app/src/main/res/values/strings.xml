@@ -1,0 +1,193 @@
+<resources>
+    <string name="app_name" translatable="false">BaiDuFace Demo</string>
+
+    <string name="face_setting" translatable="false">设置</string>
+    <string name="face_id" translatable="false">设备ID</string>
+    <string name="face_track" translatable="false">人脸检测</string>
+    <string name="face_recognize" translatable="false">识别</string>
+    <string name="face_livness" translatable="false">动作活体</string>
+    <string name="face_image" translatable="false">图片比对</string>
+    <string name="face_image_attrs" translatable="false">图片活体属性</string>
+    <string name="face_image_gaze" translatable="false">图片注意力</string>
+    <string name="face_image_emotion" translatable="false">图片情绪</string>
+    <string name="face_image_quality" translatable="false">图片质量</string>
+    <string name="face_head_pose" translatable="false">图片姿态角</string>
+    <string name="face_id_phone" translatable="false">证件照</string>
+    <string name="face_ir" translatable="false">红外比对</string>
+    <string name="face_ir_silent" translatable="false">红外活体</string>
+    <string name="face_process" translatable="false">图片处理</string>
+    <string name="face_depth" translatable="false">深度图</string>
+    <string name="face_test" translatable="false">多线程</string>
+    <string name="face_attrs" translatable="false">属性</string>
+    <string name="face_image_crop" translatable="false">图片裁剪</string>
+
+    <string name="detectInfoTxt" translatable="false">预览区域内人脸不全</string>
+
+    <string name="min_face_size" translatable="false">最小检测人脸：%s px</string>
+    <string name="image_size" translatable="false"> 分辨率：%s p</string>
+    <string name="silent_live_type" translatable="false">活体模式：%s</string>
+    <string name="feature_threshold_value" translatable="false">识别阈值：%s 分</string>
+    <string name="rgb_live_threshold_value" translatable="false">RGB 活体阈值：%s</string>
+    <string name="nir_live_threshold_value" translatable="false">NIR 活体阈值：%s</string>
+    <string name="depth_live_threshold_value" translatable="false">Depth 活体阈值：%s</string>
+    <string name="detect_type" translatable="false">检测形式：%s</string>
+
+    <string name="import_tip_1" translatable="false">在SD卡根目录创建一个文件夹，命名为Face-Import</string>
+    <string name="import_tip_2" translatable="false">按需导入图片，命名为username_group.jpg, 即用户名_用户组</string>
+    <string name="import_tip_3" translatable="false">将人脸图片放在Face-Import的文件夹中</string>
+    <string name="import_tip_4" translatable="false">点击下方按钮导入数据</string>
+
+    <string name="search_text" translatable="false">通过视频流方式，完成实时的动态人脸识别,
+        \n并集合了动态的活体检测，确保识别过程的\n安全性</string>
+
+    <string name="reigster_text" translatable="false">基于指定质量检测要求，完成人脸图像的注册
+        \n注册的人脸数据存于本地，如实际商用过程中
+        \n请使用数据接口完成特征值或图片同步</string>
+
+    <string name="user_text" translatable="false">包含人脸注册、更新、删除等业务能力，此处
+        \n操作的人脸信息仅存于本地，实际商用过程中
+        \n请使用数据接口对设备终端进行更新。</string>
+
+    <string name="import_text" translatable="false">支持人脸库的批量导入，SDK会自动基于图片
+        \n信息进行用户组和用户的创建</string>
+
+    <string name="mirror_tips" translatable="false">根据镜头或者使用设备差异，可能存在检测框与实际人脸方向镜像的问题，
+        可通过以下设置进行调节。常见于镜头前置后置切换。</string>
+
+    <string name="register_text_explain1" translatable="false">本地人脸库以人脸组的形式进行管理，每个人脸\n组下，可以注册无限个用户。
+        每个用户下默认仅\n一张人脸。 </string>
+    <string name="register_text_explain2" translatable="false">用户名为必填项。请输入英文或者数字，不支持\n汉字或者特殊字符。</string>
+    <string name="register_text_explain3" translatable="false">用户组为非必填项，如不设置用户组名，则默认\n注册到default 组下。您可以在人脸库管理中，
+        进\n行具体人脸组、人脸用户、及详细用户信息的查\n看和编辑。</string>
+    <string name="register_text_explain4" translatable="false">用户信息为非必填项，用于标记用户的一些其他\n信息。</string>
+
+    <string name="setting_notice" translatable="false">修改之后需要重启App方可生效</string>
+
+    <string name="attribute_is_available" translatable="false">BaseConfig的isAttribute要为true</string>
+
+    <string name="bottom_content" translatable="false">— 百度大脑技术支持 —</string>
+
+
+    <string name="cw_idphoto" translatable="false">证件照模型：所处理的图片主要为身份证芯片照、人脸大小很小的证件照原图等。常用于政务身份核验、社保生存证明、酒店前台人证合一等场景</string>
+
+    <string name="cw_rgcognizemodelandtype" translatable="false">对 RGB/NIR/Depth 图像帧进行特征抽取并利用该特征值完成特征比对</string>
+
+    <string name="cw_livephoto" translatable="false">生活照模型：所处理的图片主要为手机采集、视频摄像头采集的图片，也是闸机、门禁、娱乐营销、人脸登录、人脸支付等场景常用的模型，推荐的人脸大小在 60px-200px 之间，尽可能保障是清晰的正面照片</string>
+
+    <string name="cw_livedetecttype" translatable="false">活体检测主要用于判断用户是否为真人，但如使用场景下，常有固定人员看守，则可无需活体，直接采集人脸。因为活体检测虽然保障了安全性，但却会影响一定的通过率。</string>
+
+    <string name="cw_rgblive" translatable="false">RGB:仅使用 RGB 活体（单目活体），可有效防止照片翻拍、屏幕等攻击，前端采集可为 USB 单目镜头即可。</string>
+
+    <string name="cw_rgbandnir" translatable="false">RGB+NIR:RGB 单目活体+NIR 近红外活体，基于近红外图像的成像特点，如屏幕无法成像，不同材质反射率不同等，可对屏幕、高清照片等攻击，更加有效的防作弊。</string>
+
+    <string name="cw_rgbanddepth" translatable="false">RGB+Depth:RGB 单目活体+Depth 深度活体，在 RGB 活体的安全级别基础上，对屏幕、高清彩打照片、视频、模具等防御力更强。硬件需要搭配 3D 结构光、TOF 类型的镜头。</string>
+
+    <string name="cw_cameratype" translatable="false">由于 Depth/ToF 镜头需要加载对应的驱动才能正常显示，因此当选择带有 Depth的活体检测模态时，需要选择相应的镜头型号以加载对应的驱动</string>
+
+    <string name="cw_recognizethrehold" translatable="false">识别阈值：生活照和证件照模型阈值已经都做过分值映射，官方推荐判断为同一人的阈值为 80 分，详细的 FAR 和 FRR 映射关系请在 SDK 文档中查看。阈值越高识别率越高、误识率越低、通过率越低。</string>
+
+    <string name="cw_livethrehold" translatable="false">活体检测阈值：活体阈值用于判断是否活体通过，每种活体模型的阈值单独设定，可以根据此阈值来判断活体通过率和拒绝率。通常情况下，真人的活体得分极大接近于 1，非活体极大接近于 0.0，阈值设定视安全性而定。阈值越高，通过率越低、拒绝率越高</string>
+
+    <string name="cw_gesture" translatable="false">人脸在空间角度的水平旋转、平面旋转、上下俯仰三个方向的角度。角度越小，采集的人脸越正面朝前。</string>
+
+    <string name="cw_bestImage" translatable="false">最优图像帧反映了镜头取到的图像帧适合用作人脸识别的程度，分数范围为0-100，分数越接近于0表示图像越不适合用于做人脸识别，分数越接近于100表示图像越适合用于做人脸识别。</string>
+
+    <string name="cw_illuminiation" translatable="false">人脸面部的光线要求，取值范围[0~1]，脸部光照的灰度值，0 表示光照不好。对应 SDK 中，YUV 的 Y 分量】</string>
+
+    <string name="cw_blur" translatable="false">人脸图片的模糊度范围，取值范围[0~1]，0 是最清晰，1 是最模糊。可根据场景要求适当减小数值，减少模糊图片的采集情况】</string>
+
+    <string name="cw_occulusion" translatable="false">左右眼睛、左右脸颊、鼻子、嘴巴、下巴的遮挡情况，取值范围 [0~1]，0 为无遮挡，1 是完全遮挡。反映采集的人脸图片可接受的各部位的遮挡情况。</string>
+
+    <string name="cw_minface" translatable="false">最小检测人脸：视频流中可以检测到的人脸的最小面积，相同镜头焦距情况下，此数值设置的越小，人脸越容易被检索到，对应的可识别距离也就越大。此数值通常和分辨率一同配合使用。数值可调整范围为 30px 至 200px 之间，需要同时考虑分辨率大小因素影响。每次调节上下改变幅度为 10px。</string>
+
+    <string name="cw_detectangle" translatable="false">从视频流中实际检测人脸的方向，分为 0、90、180、270 四个角度。选择固定方向后，则只有人脸在此方向角度才会被检测到（RGB）。此处的设置并不影响 RGB 视频流回显的方向。</string>
+
+    <string name="cw_cameradisplayangle" translatable="false">摄像头输出视频流的实际预览界面角度，仅作用于 RGB 视频流回显界面。可用于纠正部分摄像头输出视频流角度不正确的问题，从而确保人脸保持水平朝上。</string>
+
+    <string name="cw_detectframe" translatable="false">根据镜头或者使用设备差异，可能存在检测框与实际人脸方向镜像的问题，可通过以下设置进行调节。常见于镜头前置后置切换。</string>
+
+    <string name="cw_cameradisplay" translatable="false">根据镜头或者使用设备差异，可能存在 RGB/NIR/Depth 图像帧镜像的问题，可通过以下设置进行调节。常见于镜头前置后置切换。</string>
+
+    <string name="popup_success" translatable="false">激活成功</string>
+    <string name="home_title" translatable="false">百度人脸离线识别demo</string>
+    <string name="home_gate" translatable="false">闸机模式</string>
+    <string name="home_firstrun_regitst" translatable="false">首次使用请先进行人脸注册</string>
+    <string name="home_gate_english" translatable="false">GATE MODE</string>
+    <string name="home_check" translatable="false">考勤模式</string>
+    <string name="home_check_english" translatable="false">ATTENDANCE MODE</string>
+    <string name="home_pay" translatable="false">支付模式</string>
+    <string name="home_pay_english" translatable="false">PAYMENT MODE</string>home_checkTv
+    <string name="home_attribute" translatable="false">属性模式</string>
+    <string name="home_attribute_english" translatable="false">ATTRIBUTE MODE</string>home_checkTv
+    <string name="home_liveness" translatable="false">金融活检</string>
+    <string name="home_liveness_english" translatable="false">LIVENESS MODE</string>home_checkTv
+    <string name="home_person" translatable="false">人证核验</string>
+    <string name="home_person_english" translatable="false">CERTIFICATES</string>home_checkTv
+    <string name="home_drive" translatable="false">驾驶行为分析</string>
+    <string name="home_drive_english" translatable="false">DRIVING ANALYSIS</string>home_checkTv
+    <string name="home_attention" translatable="false">注意力检测</string>
+    <string name="home_attention_english" translatable="false">ATTENTION MODE</string>home_checkTv
+    <string name="home_face" translatable="false">人脸注册</string>
+    <string name="home_faceLibrary" translatable="false">人脸库管理</string>
+    <string name="home_baidu" translatable="false">-- 百度大脑技术支持 --</string>
+    <string name="testimony_preview" translatable="false">预览模式</string>
+    <string name="testimony_development" translatable="false">开发模式</string>
+    <string name="hint_adain" translatable="false">重新上传</string>
+    <string name="testimony_upload_files" translatable="false">请上传证件照</string>
+    <string name="testimony_tips_fail" translatable="false">人证核验未通过</string>
+    <string name="testimony_tips_please_fail" translatable="false">请上传正面人脸照片</string>
+    <string name="testimony_tips_success" translatable="false">上传图片不包含人脸</string>
+    <string name="testimony_tips_please_success" translatable="false">无法进行人证比对</string>
+    <string name="string_baidu" translatable="false">百度人脸离线识别SDK</string>
+    <string name="accredit_off" translatable="false">离线激活</string>
+    <string name="off_technological_process" translatable="false">离线激活流程: </string>
+    <string name="off_technological_process_one" translatable="false">购买激活序列号</string>
+    <string name="off_technological_process_two" translatable="false">获取待激活设备的硬件指纹</string>
+    <string name="off_technological_process_three" translatable="false">在百度智能云平台输入设备硬件指纹并获取离线激活文件（License.zip）</string>
+    <string name="off_technological_process_four" translatable="false">将离线激活文件拷贝至内置SD卡根目录下</string>
+    <string name="off_technological_process_five" translatable="false">在SDK界面中触发离线激活</string>
+    <string name="off_local_hardware" translatable="false">本机硬件指纹</string>
+    <string name="off_problem" translatable="false">激活遇到问题?</string>
+    <string name="accredit_on" translatable="false">立即激活</string>
+    <string name="on_technological_process" translatable="false">在线激活流程: </string>
+    <string name="on_technological_process_two" translatable="false">在设备上输入序列号并触发激活</string>
+    <string name="on_number" translatable="false">请输入16位序列号</string>
+    <string name="accredit_use" translatable="false">应用激活</string>
+    <string name="use_technological_process" translatable="false">批量激活流程: </string>
+    <string name="use_technological_process_one" translatable="false">购买应用激活次数</string>
+    <string name="use_technological_process_two" translatable="false">在代码中的LicenseBatch方法填写License ID</string>
+    <string name="use_technological_process_three" translatable="false">点击立即激活按键触发激活</string>
+    <string name="activation_help" translatable="false">激活帮助</string>
+    <string name="activation_failed" translatable="false">激活失败可能原因:</string>
+    <string name="activation_help_one" translatable="false">1. 设备网络问题: 请保证设备网络通畅</string>
+    <string name="activation_help_two" translatable="false">2. 系统时间错误: 请保证系统时间在XX范围内</string>
+    <string name="activation_help_three" translatable="false">3. 硬件指纹变化导致序列号失效</string>
+    <string name="activation_help_four" translatable="false">4. 序列号失效: 请重新购买</string>
+    <string name="activation_help_five" translatable="false">5. 激活文件失效</string>
+    <string name="activation_help_six" translatable="false">6. 未检测到激活文件</string>
+    <string name="technical_support" translatable="false">技术支持:</string>
+    <string name="activation_help_url" translatable="false">http://ticket.bce.baidu.com</string>
+    <string name="filter_vcode" translatable="false">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="use_chip" translatable="false">芯片激活流程: </string>
+    <string name="chip_use" translatable="false">芯片激活</string>
+    <string name="use_chip_one" translatable="false">购买授权加密芯片</string>
+    <string name="use_chip_two" translatable="false">点击『立即激活』完成激活鉴权</string>
+    <string name="accredit_on_str" translatable="false">在线激活</string>
+    <string name="not_have_valid_activation_credits" translatable="false">:激活失败，没有有效的激活次数，请购买激活次数</string>
+    <string name="authorization_application_has_expired" translatable="false">:激活失败，该应用授权已超出授权有效期</string>
+    <string name="ensure_network_normal" translatable="false">:激活失败，该应用授权已超出授权有效期</string>
+
+    <string name="toast_device_not_authorized" translatable="false">未授权设备，请完成授权激活</string>
+    <string name="error_license_not_exist" translatable="false">授权码不存在，请重新输入！</string>
+
+    <string name="toast_model_loaded_success" translatable="false">模型加载成功，欢迎使用</string>
+    <string name="toast_model_loaded_failed" translatable="false">模型加载失败，请尝试重启应用</string>
+    <string name="toast_face_db_load_failed" translatable="false">人脸库加载失败,共</string>
+    <string name="toast_face_db_load_data_count" translatable="false">条数据, 已加载</string>
+    <string name="toast_face_db_load_data_unit" translatable="false">条数据</string>
+    <string name="toast_model_not_initialized" translatable="false">模型尚未初始化完毕</string>
+    <string name="text_online_activation" translatable="false">在线激活</string>
+    <string name="progress_loading_face_database" translatable="false">人脸库加载中</string>
+    <string name="feature_title_offline_face_recognition_journey" translatable="false">开       启       离       线       刷       脸       之       旅</string>
+    <string name="navigation_see_all_guides" translatable="false">查看更多帮助</string>
+</resources>

@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/all_relative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal">
+
+    <!--圆形进度条-->
+    <RelativeLayout
+        android:id="@+id/progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/progress_bar_view"
+            android:layout_width="440dp"
+            android:layout_height="440dp"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/ic_loading_grey" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/pre_toast_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:gravity="center_horizontal"
+        android:text="@string/face_within_frame"
+        android:textColor="#ffffff"
+        android:textSize="22sp" />
+
+    <!--送检图片-->
+
+
+    <RelativeLayout
+        android:id="@+id/pay_hintRl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/search_title"
+        android:background="#121212"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/detect_reg_layout"
+            android:layout_width="108dp"
+            android:layout_height="108dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="91dp">
+
+            <com.example.datalibrary.view.CircleImageView
+                android:id="@+id/detect_reg_image_item"
+                android:layout_width="108dp"
+                android:layout_height="108dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" />
+
+            <ImageView
+                android:id="@+id/is_mask_image"
+                android:layout_width="108dp"
+                android:layout_height="108dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/is_check_image_view"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:layout_alignEnd="@+id/detect_reg_layout"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="73dp"
+            tools:ignore="RtlCompat" />
+
+        <TextView
+            android:id="@+id/detect_reg_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detect_reg_layout"
+            android:layout_marginTop="24dp"
+            android:gravity="center_horizontal"
+            android:textColor="#00BAF2"
+            android:textSize="22sp" />
+
+    </RelativeLayout>
+
+
+
+    <!--********** 头部 **********-->
+    <include
+        android:id="@+id/search_title"
+        layout="@layout/layout_title_gate" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/search_title"
+        android:background="#333333" />
+    <!--********** 信息展示部分 **********-->
+    <!--开发模式-->
+
+
+</RelativeLayout>

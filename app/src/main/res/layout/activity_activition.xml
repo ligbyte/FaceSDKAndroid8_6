@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <include
+        android:id="@+id/activition_titleRl"
+        layout="@layout/activity_activition_title" />
+
+    <View
+        android:id="@+id/accredit_lineView"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/activition_titleRl"
+        android:layout_marginTop="14dp"
+        android:background="#333333" />
+
+    <com.baidu.idl.face.main.view.NoScrollViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/baidu_text"
+        android:layout_below="@+id/accredit_lineView" />
+
+
+
+    <TextView
+        android:id="@+id/baidu_text"
+        android:textSize="@dimen/bottom_font"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/start_15"
+        android:text="@string/home_baidu"
+        android:textColor="#ffffff" />
+
+
+
+</RelativeLayout>

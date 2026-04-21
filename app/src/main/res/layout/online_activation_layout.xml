@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--
+        在线激活
+    -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/accredit_onRl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/accredit_onLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="49.3dp"
+                android:layout_marginTop="@dimen/start_15"
+                android:layout_marginRight="49.3dp"
+                android:background="@drawable/bg_round_import"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/start_15"
+                    android:text="@string/on_technological_process"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/activition_14_sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/start_15"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/activity_hintOnOne"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="一"
+                        android:textColor="#ffffff"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/activity_hintOnOne"
+                        android:text="@string/off_technological_process_one"
+                        android:textColor="#ffffff"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/start_10"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="@dimen/start_15"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/activity_hintOnTwo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="二"
+                        android:textColor="#ffffff"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/activity_hintOnTwo"
+                        android:text="@string/on_technological_process_two"
+                        android:textColor="#ffffff"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/hint_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/accredit_onLl"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/on_number"
+                android:textColor="@color/bottom_font_color"
+                android:textSize="@dimen/activition_16" />
+
+            <include
+                android:id="@+id/pc_1"
+                layout="@layout/layout_edittext_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hint_Tv"
+                android:layout_marginLeft="@dimen/activition_49"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="@dimen/activition_49" />
+
+            <TextView
+                android:id="@+id/accredit_onhintTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pc_1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="49.3dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginRight="49.3dp"
+                android:textColor="@color/activition_red"
+                android:textSize="@dimen/bottom_font" />
+
+            <Button
+                android:id="@+id/accredit_onBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/accredit_onhintTv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="@dimen/activition_14"
+                android:layout_marginRight="50dp"
+                android:background="@mipmap/btn_all_d"
+                android:enabled="false"
+                android:padding="13dp"
+                android:text="@string/accredit_on"
+                android:textColor="@color/bottom_font_color"
+                android:textSize="@dimen/activition_18_sp" />
+
+            <TextView
+                android:id="@+id/accredit_onhiteTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/accredit_onBtn"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="@string/off_problem"
+                android:textColor="#999999" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

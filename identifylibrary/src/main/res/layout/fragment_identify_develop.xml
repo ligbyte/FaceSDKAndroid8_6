@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="bottom"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_above="@+id/develop_group"
+        android:id="@+id/picture_group"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginTop="83dp">
+
+        <LinearLayout
+            android:id="@+id/add_picture_but"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:importantForAccessibility="no"
+                android:src="@mipmap/add_picture" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/prompt_upload_compare_image"
+                android:textColor="@color/white"
+                android:textSize="26sp"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+        <ImageView
+            android:importantForAccessibility="no"
+            android:visibility="gone"
+            android:id="@+id/picture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/again_add_picture"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/cw_transparent_20_round"
+            android:gravity="center"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp"
+            android:text="@string/hint_adain"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/video_image_group"
+        android:layout_above="@+id/develop_group"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="10dp"
+        android:gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="130dp">
+
+        <include layout="@layout/item_save_camera"
+            android:layout_above="@+id/test_rgb_rl"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"/>
+
+        <!--RGB 检测图片测试-->
+        <RelativeLayout
+            android:layout_alignParentBottom="true"
+            android:id="@+id/test_rgb_rl"
+            android:layout_width="110dp"
+            android:layout_height="82.7dp"
+            android:gravity="bottom"
+            android:layout_above="@+id/person_buttomLl_All"
+            android:layout_marginBottom="5dp">
+
+            <ImageView
+                android:id="@+id/test_rgb_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gate_imageview_radius"
+                android:src="@mipmap/ic_image_video" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="23dp"
+                android:layout_alignParentBottom="true"
+                android:background="#B3000000"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="23dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/label_detect_frame_rgb"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/person_kaifaIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="2dp"
+                    android:src="@mipmap/ic_icon_develop_success"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <!--nir视频帧-->
+        <RelativeLayout
+            android:id="@+id/nir_group"
+            android:layout_width="110dp"
+            android:layout_height="83dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="bottom"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            >
+
+            <TextureView
+                android:id="@+id/ir_camera_preview_view"
+                android:layout_width="110dp"
+                android:layout_height="83dp"
+                android:layout_alignParentEnd="true"
+                tools:ignore="RtlCompat" />
+            <TextView
+                android:id="@+id/nir_surface_text"
+                android:layout_width="110dp"
+                android:layout_height="23dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignStart="@+id/ir_camera_preview_view"
+                android:background="@drawable/relativelayout_radius"
+                android:text="@string/label_detect_frame_nir"
+                android:textColor="#FFFFFFFF"
+                android:layout_alignParentBottom="true"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText,RtlCompat" />
+            <ImageView
+                android:id="@+id/is_nir_check_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="2dp"
+                android:visibility="visible"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                tools:ignore="RtlCompat" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <!--        开发模式-->
+    <include
+        android:id="@+id/develop_group"
+        layout="@layout/layout_testimony_development_model" />
+    <!--        提示-->
+    <include layout="@layout/layout_testimory_hint" />
+
+</RelativeLayout>
