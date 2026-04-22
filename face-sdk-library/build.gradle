@@ -33,6 +33,6 @@ android {
 
 dependencies {
     api fileTree(dir: "libs", include: ["*.jar"])
-   // api project(path: ':facelibrary')
-    implementation project(':faceaar')
+    implementation project(':face-faceaar')
+    // api project(path: ':facelibrary')
 }

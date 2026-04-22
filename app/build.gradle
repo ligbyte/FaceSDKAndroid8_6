@@ -62,8 +62,8 @@ android {
 }
 
 dependencies {
-    implementation project(path: ':registerlibrary')
-    implementation project(path: ':identifylibrary')
+    implementation project(path: ':face-registerlibrary')
+    implementation project(path: ':face-identifylibrary')
     implementation project(path: ':face-sdk-library')
     api fileTree(include: ['*.jar'], dir: 'libs')
     //noinspection GradleCompatible
@@ -75,12 +75,12 @@ dependencies {
 //    implementation files('libs/picozensesdk-release.aar')
 //    implementation files('libs/SocketClient.jar')
     api 'com.google.code.gson:gson:2.6.2'
-    implementation project(':datalibrary')
-    implementation project(':facelibrary')
-    implementation project(':faceaar')
-    implementation project(':gatelibrary')
-    implementation project(':AuthLibrary')
-    implementation project(':settinglibrary')
-    implementation project(':attrbutelibrary')
+    implementation project(':face-datalibrary')
+    implementation project(':face-facelibrary')
+    implementation project(':face-faceaar')
+    implementation project(':face-gatelibrary')
+    implementation project(':face-AuthLibrary')
+    implementation project(':face-settinglibrary')
+    implementation project(':face-attrbutelibrary')
 
 }
