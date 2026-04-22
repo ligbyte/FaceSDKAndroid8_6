@@ -86,9 +86,9 @@ public class BaseConfig {
     private boolean attribute = false;
 
     // rgb和nir摄像头宽
-    private int rgbAndNirWidth = 640;
+    private int rgbAndNirWidth = 1280;
     // rgb和nir摄像头高
-    private int rgbAndNirHeight = 480;
+    private int rgbAndNirHeight = 720;
     // depth摄像头宽
     private int depthWidth = 640;
     // depth摄像头高

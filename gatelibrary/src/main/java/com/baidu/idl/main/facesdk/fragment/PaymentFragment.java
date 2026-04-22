@@ -136,7 +136,7 @@ public class PaymentFragment extends BaseFragment {
             return;
         }
         if (livenessModel.getUser() != null) {
-            // todo: 成功展示kk
+            // todo: 人脸识别成功展示kk
             progressLayout.setVisibility(View.GONE);
             payHintRl.setVisibility(View.VISIBLE);
             String absolutePath = FileUtils.getBatchImportSuccessDirectory()

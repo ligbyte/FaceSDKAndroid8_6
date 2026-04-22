@@ -23,7 +23,7 @@ import java.util.List;
 public class BdFaceRectView extends View {
     public static final float LINE_WIDTH = 100f;
     public static final float STROKE_WIDTH = 10f;
-    public static final float FACIAL_AREA = 50f;
+    public static final float FACIAL_AREA = 500f;
 
     private Paint paint;
     private List<LivenessModel> models;
